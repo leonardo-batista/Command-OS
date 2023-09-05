@@ -1,0 +1,62 @@
+
+############
+# SUMMARY  #
+############
+
+	The purpose is find the commands easily :)
+
+
+############
+# MAC OS   #
+############
+
+	- Kill process :  
+		Find -> llsof -i:<port number>
+		Kill -> kill -9 <process number>
+
+
+############
+# DEBIAN   #
+############
+
+	- Memory :
+		Summary -> free
+		Detailed -> vmstat
+		Memory and CPU consumption per process -> top
+
+
+	- Commonly use command-line :
+		Clear screen -> clear
+		Display or change date -> date
+		Stop a process -> kill
+		List -> ls
+		Create directory -> mkdir
+		Move or rename file / directory -> mv
+		Working directory -> pwd
+		Displays the last lines of a file -> tail
+		Check the status of service -> sudo systemctl status Service_Name
+		Start Service -> sudo systemctl start Service_Name
+		Stop Service -> sudo systemctl stop Service_Name
+		Restart Service -> sudo systemctl restart Service_Name
+
+
+	- Docker :
+		Start container -> sudo docker start Name_Container
+		Stop container -> sudo docker stop Name_Container
+		List image -> sudo docker image ls
+		List containers -> sudo docker ps or sudo docker container ls
+		List containers with pattern -> sudo docker ps -a | grep "pattern"
+		List volume -> sudo docker volume ls
+		Remove volume -> sudo docker volume rm Volume_Name
+		Remove container -> sudo docker rm ID_or_Name
+		Create Container as Image -> sudo docker commit "Container" "Image"  (Container: Name or ID / Image: Name of the image)
+
+
+	- Google Drive
+		Download -> wget
+			Example : 
+
+				$urlFileWebApp = "https://docs.google.com/uc?export=download&confirm=CONFIRM_CODE&id=$urlFileId"
+				sudo wget --load-cookies %TMP%/cookies.txt --no-check-certificate "$urlFileWebApp" -O MyFile.zip
+
+				Note* urlFileId = IdGoogle
