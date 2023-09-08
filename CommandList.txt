@@ -51,6 +51,18 @@
 		Remove container -> sudo docker rm ID_or_Name
 		Create Container as Image -> sudo docker commit "Container" "Image"  (Container: Name or ID / Image: Name of the image)
 
+	- Docker SQL Server
+		sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" -p 1433:1433 --name sql1 --hostname sql1 -d mcr.microsoft.com/mssql/server:2022-latest
+
+		Note*
+		https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash
+
+	- Docker Oracle XE
+		sudo docker run --name oracle-xe-21 -p <PORT>:1521 -p <PORT>:5500 -e ORACLE_PWD=MY_PASSWORD -e ORACLE_CHARACTERSET=AL32UTF8 -v /opt/oracle/oradata container-registry.oracle.com/database/express:21.3.0-xe
+
+		Note*
+		https://docs.oracle.com/en/database/oracle/oracle-database/21/deeck/index.html#GUID-6589D4A1-14F3-42B3-8461-C9A7B840D148
+
 
 	- Google Drive
 		Download -> wget
